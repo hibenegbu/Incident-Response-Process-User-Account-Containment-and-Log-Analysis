@@ -20,11 +20,9 @@ In this project, I performed an incident response process on a compromised accou
 ## Step 1: Identifying Suspicious Activity
 System logs showing failed login attempts and sudo command failures were the first indication of a compromise. I used the following commands to investigate:
 - **Checking for failed login attempts:**
-'''bash
-sudo grep 'Failed' /var/log/auth.log
-'''
+-sudo grep 'Failed' /var/log/auth.log
 -	**Checking sudo command attempts for unusual activity:
-sudo grep 'sudo' /var/log/auth.log
+-sudo grep 'sudo' /var/log/auth.log
 -	**Viewing system activity logs:
 sudo tail -n 100 /var/log/syslog
 ## Step 2: Containing the Compromised User Account
