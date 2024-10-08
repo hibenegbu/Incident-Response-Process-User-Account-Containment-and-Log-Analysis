@@ -28,37 +28,37 @@ sudo tail -n 100 /var/log/syslog
 ## Step 2: Containing the Compromised User Account
 Once I confirmed the suspicious activity, I immediately locked the malicious_user account to prevent further login attempts:
 -	**Locking the user account:
-Sudo usermod -L malicious_user
+- **Sudo usermod -L malicious_user
 -	**Confirming the account was disabled:
-su malicious_user
+- **su malicious_user
 ## Step 3: Investigating Running Processes
 I identified and terminated any active processes associated with malicious_user:
 -	**Listing active processes:
-ps aux | grep malicious_user
+- **ps aux | grep malicious_user
 -	**Killing any suspicious processes:
-sudo kill <process_id>
+- **sudo kill <process_id>
 ## Step 4: Reviewing Network Connections
 I checked if the compromised user had established any suspicious network connections:
 -	**Listing active network connections and services:
-sudo netstat -tulnp
+- **sudo netstat -tulnp
 Step 5: Reviewing Logs for Further Suspicious Activity
 I reviewed the system logs for any additional suspicious activities after the user account was locked:
 -	**Checking for failed login attempts:
-sudo grep 'Failed' /var/log/auth.log
+- **sudo grep 'Failed' /var/log/auth.log
 -	**Reviewing sudo activities:
-Sudo grep 'sudo' /var/log/auth.log
+- **sudo grep 'sudo' /var/log/auth.log
 ## Step 6: Verifying and Restarting Logging Services
 To ensure the logging services were working correctly, I checked and restarted the rsyslog service:
 -	**Checking the status of rsyslog service:
-sudo service rsyslog status
+- **sudo service rsyslog status
 -	**Restarting rsyslog if needed:
-sudo systemctl restart rsyslog
+-**sudo systemctl restart rsyslog
 ## Step 7: Final Cleanup and User Deletion
 After confirming that the system was clean and secure, I deleted the malicious_user account:
 -	**Deleting the user account:
-sudo userdel malicious_user
+-**sudo userdel malicious_user
 -	**Verifying the user account was removed:
-cat /etc/passwd | grep malicious_user
+- **cat /etc/passwd | grep malicious_user
 Conclusion
 I completed the incident response process, securing the system by disabling and removing the compromised account. My logs confirmed no further suspicious activity. This project demonstrates the critical steps I took in analyzing and securing the compromised system, including log analysis, process termination, and network monitoring.
  
