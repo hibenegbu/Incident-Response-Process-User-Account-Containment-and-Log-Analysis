@@ -59,7 +59,8 @@ After confirming that the system was clean and secure, I deleted the malicious_u
 -**sudo userdel malicious_user
 -	**Verifying the user account was removed:
 - **cat /etc/passwd | grep malicious_user
-Conclusion
+
+- **Conclusion
 I completed the incident response process, securing the system by disabling and removing the compromised account. My logs confirmed no further suspicious activity. This project demonstrates the critical steps I took in analyzing and securing the compromised system, including log analysis, process termination, and network monitoring.
  
 Tools I Used:
