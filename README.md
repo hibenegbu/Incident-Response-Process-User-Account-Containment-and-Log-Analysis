@@ -61,7 +61,7 @@ After confirming that the system was clean and secure, I deleted the malicious_u
 - **cat /etc/passwd | grep malicious_user
 
 - **Conclusion
-I completed the incident response process, securing the system by disabling and removing the compromised account. My logs confirmed no further suspicious activity. This project demonstrates the critical steps I took in analyzing and securing the compromised system, including log analysis, process termination, and network monitoring.
+- *I completed the incident response process, securing the system by disabling and removing the compromised account. My logs confirmed no further suspicious activity. This project demonstrates the critical steps I took in analyzing and securing the compromised system, including log analysis, process termination, and network monitoring.
  
 Tools I Used:
 •	Kali Linux
